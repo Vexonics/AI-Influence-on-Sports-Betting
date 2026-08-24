@@ -8,3 +8,4 @@ venv/
 data/raw/
 *.sqlite
 *.db
+AI-Influence-on-Sports-Betting/data/database.sqlite 2
