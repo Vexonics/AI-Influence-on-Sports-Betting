@@ -5,7 +5,7 @@ from umap import UMAP
 from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 
-df = pd.read_csv("data/processed/ai_posts_cleaned.csv")
+df = pd.read_csv("data/processed/ai_posts_final.csv")
 documents = df["full_text"].fillna("").tolist()
 
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
