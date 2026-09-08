@@ -12,16 +12,16 @@ embedder = SentenceTransformer("all-MiniLM-L6-v2")
 embeddings = embedder.encode(documents, show_progress_bar=True)
 
 umap_model = UMAP(
-    n_neighbors=15,
-    n_components=5,
-    min_dist=0.0,
-    metric="cosine",
-    random_state=42,
+    n_neighbors = 15,
+    n_components = 5,
+    min_dist = 0.0,
+    metric = "cosine",
+    random_state = 42,
 )
 reduced_embeddings = umap_model.fit_transform(embeddings)
 
 hdbscan_model = HDBSCAN(
-    min_cluster_size=5,
+    min_cluster_size = 8,
     metric="euclidean",
     cluster_selection_method="eom",
 )
